@@ -1,42 +1,37 @@
 package game;
+import javax.swing.JOptionPane;
 
-public class Cavaleiro extends Personagem implements ComportamentoHeroico,ComportamentoNormal {
+public class Cavaleiro extends Personagem implements ComportamentoHeroico, ComportamentoNormal {
 	
-	public Cavaleiro(String nome){
+	public Cavaleiro(String nome) {
 		super(nome);
 	}
 
-	
-	public void usarItem(){
-		System.out.println("O cavaleiro:"+super.nome+"\\"+"esta usando o usando o item");
+	public void usarItem() {
+		JOptionPane.showMessageDialog(null, "O cavaleiro "+super.nome+" esta usando o machado");
 	}
 	
-	public void guardaItem(){
-		System.out.println("O cavaleiro:"+super.nome+"\\"+"esta guardando usando o item");
-		
+	public void guardarItem() {
+		JOptionPane.showMessageDialog(null, "O cavaleiro "+super.nome+" guardou o machado");
 	}
 	
-	public void andar(){
-		System.out.println("O cavaleiro:"+super.nome+"\\"+"andou");
+	public void andar() {
+		JOptionPane.showMessageDialog(null, "O cavaleiro "+super.nome+" andou");
 	}
-	
 	
 	@Override
 	public void atacar() {
-	
-		System.out.println("O cavaleiro:"+super.nome+"atacou");
+		JOptionPane.showMessageDialog(null, "O cavaleiro "+super.nome+" atacou");
 	}
 
 	@Override
 	public void defender() {
-	
-		System.out.println("O cavaleiro:"+super.nome+"defendeu");
+		JOptionPane.showMessageDialog(null, "O cavaleiro "+super.nome+" defendeu");
 	}
 
 	@Override
 	public void saltar() {
-	
-		System.out.println("O cavaleiro:"+super.nome+"se defendeu");
+		JOptionPane.showMessageDialog(null, "O cavaleiro "+super.nome+" saltou");
 	}
 }
 

@@ -7,53 +7,53 @@ public class Main {
 	public static void main(String[] args) {
 
 		ArrayList<Personagem> personagem = new ArrayList<Personagem>();
-		Dragao dr1 = new Dragao("Srket");
-		Dragao dr2 = new Dragao("Felps");
-		Mago m1 = new Mago("O fantastico mago");
-		Mago m2 = new Mago("O magoImpacavel");
-		Cavaleiro cav1 = new Cavaleiro("Lothric");
-		Cavaleiro cav2 =  new Cavaleiro("Goku");
-		personagem.add(cav1);
-		personagem.add(cav2);
-		personagem.add(m1);
-		personagem.add(m2);
-		personagem.add(dr1);
-		personagem.add(dr2);
+		Dragao dragon1 = new Dragao("Krieger");
+		Dragao dragon2 = new Dragao("Showei");
+		Mago mago1 = new Mago("O fantastico mago");
+		Mago mago2 = new Mago("O magoImpacavel");
+		Cavaleiro cavaleiro1 = new Cavaleiro("Seiya");
+		Cavaleiro cavaleiro2 =  new Cavaleiro("Goku");
+		personagem.add(cavaleiro1);
+		personagem.add(cavaleiro2);
+		personagem.add(mago1);
+		personagem.add(mago2);
+		personagem.add(dragon1);
+		personagem.add(dragon2);
 		
-		Jogo Dk = new Jogo("dd");
+		Jogo gameDuelo = new Jogo();
 		
 		
-		for(Personagem perso:personagem){
-			if(perso instanceof Cavaleiro)
+		for(Personagem personaC:personagem)
+		{
+			if(personaC instanceof Cavaleiro)
 			{
-				Cavaleiro cav = (Cavaleiro) perso;
-				Dk.ExecutaAcoesComuns(cav);
+				Cavaleiro cav = (Cavaleiro) personaC;
+				gameDuelo.executaAcoesComuns(cav);
 			
 			}
-			for(Personagem per:personagem){
-				if(per instanceof Mago)
+			
+			for(Personagem personaM:personagem)
+			{
+				if(personaM instanceof Mago)
 				{
-					Mago mags = (Mago) per;
-					Dk.ExecutaAcoesComuns(mags);
+					Mago mags = (Mago) personaM;
+					gameDuelo.executaAcoesComuns(mags);
 				}
 			}
 			
-			for(Personagem pir:personagem)
+			for(Personagem personaD:personagem)
 			{
-				if(pir instanceof Dragao)
+				if(personaD instanceof Dragao)
 				{
-					Dragao drags = (Dragao) pir;
-					Dk.ExecutaAcoesComuns(drags);
+					Dragao drags = (Dragao) personaD;
+					gameDuelo.executaAcoesComuns(drags);
 				}
 			}
-			
 		
-		Personagem p = new Mago("Salamin");
-		((Mago)p).invisibilidade();
+			Personagem p = new Mago("Salamin");
+			((Mago)p).invisibilidade();
 		
-	}
-
+		}
   }
-	
 }
 

@@ -1,32 +1,32 @@
 package game;
 
+import javax.swing.JOptionPane;
+
 public class Dragao extends Personagem implements ComportamentoNormal {
 	
-	public Dragao(String nome)
-	{
+	public Dragao(String nome) {
 		super(nome);
 	}
 	
-	public void atiraFogo(){
-		System.out.println("O Dragao:"+super.nome+"esta atirando fogo em todo mundo");
+	public void atiraFogo() {
+		JOptionPane.showMessageDialog(null, "O Dragao"+super.nome+" esta cuspindo fogo!");
 	}
 	
-	public void voar(){
-		System.out.println("O Dragao:"+super.nome+"\\"+"esta voando");
+	public void voar() {
+		JOptionPane.showMessageDialog(null, "O Dragao"+super.nome+" esta voando!");
 	}
 	
-	public void moder(){
-		System.out.println("O Dragao:"+super.nome+"modeu com os cavaleiros de Lothric");
+	public void moder() {
+		JOptionPane.showMessageDialog(null, "O Dragao"+super.nome+" acabou de morder os cavaleiros.");
 	}
 	
-	public void andar()
-	{
-		System.out.println("O Dragao:"+super.nome+"\\"+"esta andando");
+	public void andar() {
+		JOptionPane.showMessageDialog(null, "O Dragao"+super.nome+" andou.");
 	}
-	public void guardaItem(){
-		System.out.println("O Dragao:"+super.nome+"\\"+"esta Guardando o item");
+	public void guardarItem() {
+		JOptionPane.showMessageDialog(null, "O Dragao"+super.nome+" guardou o item.");
 	}
-	public void usarItem(){
-		System.out.println("O Dragao:"+super.nome+"\\"+"esta usando o item");
+	public void usarItem() {
+		JOptionPane.showMessageDialog(null, "O Dragao"+super.nome+" esta usando o item.");
 	}
 }

@@ -2,28 +2,12 @@ package game;
 
 public class Jogo {
 	
+	public Jogo() {};
 	
-	private String nome;
-	public Jogo(String nome){
-		this.nome = nome;
-	};
-	
-	
-	public String getNome() {
-		return nome;
-	}
 
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-
-	public void ExecutaAcoesComuns(Personagem tipo){
+	public void executaAcoesComuns(Personagem tipo){
 		tipo.andar();
-		tipo.guardaItem();
+		tipo.guardarItem();
 		tipo.usarItem();
-
 	}
-	
 }
